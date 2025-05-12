@@ -46,53 +46,62 @@ export default function AddExpense() {
         padding: "20px",
       }}
     >
-      <div className="bg-white rounded-xl shadow-lg p-10 max-w-lg w-full border" style={{ borderColor: "#fcb69f", borderWidth: "2px" }}>
-        <h1 className="text-3xl font-bold mb-8 text-center" style={{ color: "#ff7e5f" }}>
+      <div className="bg-white rounded-xl shadow-lg p-10 max-w-lg w-[900px] border" style={{ borderColor: "#fcb69f", borderWidth: "2px" }}>
+        <h1 className="text-3xl font-bold mb-8 text-center" style={{ color: "#ff7e5f" , margin:'20px' }}>
           Add New Expense
         </h1>
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <input
-            type="text"
-            placeholder="Expense Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className="w-full border border-gray-300 p-4 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
-            required
-          />
-          <input
-            type="number"
-            placeholder="Amount"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-            className="w-full border border-gray-300 p-4 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
-            required
-          />
-          <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="w-full border border-gray-300 p-4 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
-          >
-            <option>Food</option>
-            <option>Travel</option>
-            <option>Shopping</option>
-            <option>Health</option>
-            <option>Other</option>
-          </select>
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            className="w-full border border-gray-300 p-4 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full h-13 py-3 rounded text-white font-semibold shadow-md text-lg transition duration-300"
-            style={{ backgroundColor: "#ff7e5f" }}
-          >
-            Add Expense
-          </button>
-        </form>
+
+        <form
+  onSubmit={handleSubmit}
+  className="flex flex-col gap-4 items-center" 
+>
+  <input
+    type="text"
+    placeholder="Expense Title"
+    value={title}
+    onChange={(e) => setTitle(e.target.value)}
+    className="w-[400px] border border-gray-300 p-4 pl-8 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
+     style={{ paddingLeft: '20px' }}
+    required
+  />
+  <input
+    type="number"
+    placeholder="Amount"
+    value={amount}
+    onChange={(e) => setAmount(e.target.value)}
+    className="w-[400px] border border-gray-300 p-4 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
+      style={{ paddingLeft: '20px' }}
+    required
+  />
+  <select
+    value={category}
+    onChange={(e) => setCategory(e.target.value)}
+    className="w-[400px] border border-gray-300 p-4 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
+      style={{ paddingLeft: '20px', paddingRight:'20px' }}
+  >
+    <option>Food</option>
+    <option>Travel</option>
+    <option>Shopping</option>
+    <option>Health</option>
+    <option>Other</option>
+  </select>
+  <input
+    type="date"
+    value={date}
+    onChange={(e) => setDate(e.target.value)}
+    className="w-[400px] border border-gray-300 p-4 h-14 text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fcb69f]"
+     style={{ paddingLeft: '20px', paddingRight:'10px' }}
+    required
+  />
+  <button
+    type="submit"
+    className="w-[200px] px-6 bg-[#ff7e5f] hover:bg-[#ff6744] h-13 py-3 rounded text-white font-semibold shadow-md text-lg transition duration-300"
+    style={{ margin: '20px' }}
+  >
+    Add Expense
+  </button>
+</form>
+
       </div>
     </div>
   );

@@ -25,8 +25,8 @@ const Balances = () => {
     <div className="w-1/2 mx-auto mt-20  bg-gradient-to-r from-[#ffecd2] to-[#fcb69f]">
       <div className="border-2 border-none rounded-lg w-full p-4 shadow-lg">
         <div className="top mb-4 text-center">
-          <h3 className='text-2xl  text-[#2d2d2d] font-bold'>Balance</h3>
-          <div className="salary text-3xl font-bold text-[#2d2d2d]">
+          <h3 className='text-3xl  text-[#ff7e5f]  font-bold'>Balance</h3>
+          <div className="salary text-3xl font-bold text-[#ff7e5f] ">
             ${balance}
           </div>
         </div>

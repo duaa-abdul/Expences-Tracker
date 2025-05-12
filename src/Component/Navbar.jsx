@@ -13,16 +13,17 @@ const Navbar = ({ isOpen, onClose }) => {
         <button onClick={onClose} className="text-[#2d2d2d] text-2xl font-bold">&times;</button>
       </div>
 
-      <h2 className="text-3xl font-bold text-center text-[#2d2d2d] m-4">BudgetBox </h2>
+      <h2 className="text-3xl font-bold text-center text-[#2d2d2d] m-4" style={{ color: "#ff7e5f" , margin:'20px'}}>BudgetBox </h2>
 
-      <nav className="flex flex-col gap-4 mt-10">
+      <nav className="flex flex-col  gap-4 ">
         <NavLink
           to="/home"
           onClick={onClose}
           className={({ isActive }) =>
-            `px-4 py-2 text-xl font-semibold rounded transition text-[#2d2d2d] ${
+            `px-4 text-xl font-semibold rounded transition text-[#2d2d2d] ${
               isActive ? " text-[#2d2d2d] " : "hover:bg-[#ffe3c2]"}`
           }
+           style={{paddingLeft:'10px' , marginTop:'10px'}}
         >
           🏠 Home
         </NavLink>
@@ -33,6 +34,7 @@ const Navbar = ({ isOpen, onClose }) => {
             `px-4 py-2 text-xl font-semibold rounded transition text-[#2d2d2d] ${
               isActive ? "bg-gray-700 text-white" : "hover:bg-[#ffe3c2]"}`
           }
+           style={{paddingLeft:'10px'}}
         >
           ➕ Add Transaction
         </NavLink>
@@ -41,8 +43,10 @@ const Navbar = ({ isOpen, onClose }) => {
           onClick={onClose}
           className={({ isActive }) =>
             `px-4 py-2 text-xl font-semibold rounded transition text-[#2d2d2d] ${
-              isActive ? "bg-gray-700 text-white" : "hover:bg-[#ffe3c2]"}`
+              isActive ? "bg-gray-700 text-white" : "hover:bg-[#ffe3c2]"} `
+    
           }
+           style={{paddingLeft:'10px'}}
         >
           💰 Add Income
         </NavLink>
@@ -51,8 +55,9 @@ const Navbar = ({ isOpen, onClose }) => {
           onClick={onClose}
           className={({ isActive }) =>
             `px-4 py-2 text-xl w-[120px] font-semibold rounded transition text-[#2d2d2d] bg-[#ff7e5f] ${
-              isActive ? "bg-gray-700 text-white" : "hover:bg-[#ffe3c2]"}`
+              isActive ? "bg-gray-700 text-white" : "bg-[#ffe3c2]"}`
           }
+           style={{paddingLeft:'10px'}}
         >
           📂 Logout
         </NavLink>
