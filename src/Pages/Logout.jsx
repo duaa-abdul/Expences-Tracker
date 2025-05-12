@@ -10,6 +10,7 @@ const Logout = () => {
     const handleLogout = async () => {
       try {
         await signOut(auth);
+
         localStorage.removeItem("currentUser");
         navigate("/");
       } catch (error) {

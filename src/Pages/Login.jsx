@@ -26,6 +26,8 @@ const Login = () => {
         formData.password
       );
       const user = userCredential.user;
+      localStorage.setItem("currentUser", user.email);
+
       setFormData({ email: "", password: "" });
       navigate('/home'); 
     } catch (error) {

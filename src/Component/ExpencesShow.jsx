@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const ExpencesShow = ({ expenses, setExpenses }) => {
   const currentUserEmail = localStorage.getItem("currentUser");
 
-  // Load only the current user's expenses on component mount
+
   useEffect(() => {
     const allExpenses = JSON.parse(localStorage.getItem("expenses")) || {};
     const userExpenses = allExpenses[currentUserEmail] || [];

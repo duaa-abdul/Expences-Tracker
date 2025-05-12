@@ -19,21 +19,26 @@ const SignUp = () => {
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
-            const user = userCredential.user;
 
-            if (user) {
-                console.log("User created:", user);
-                setFormData({ email: "", password: "", name: "" });
-                navigate('/home'); 
-            }
-        } catch (error) {
-            console.log("Error during signup:", error);
-        }
-    };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+    const user = userCredential.user;
+
+    if (user) {
+      localStorage.setItem("currentUser", user.email);
+
+      console.log("User created:", user);
+      setFormData({ email: "", password: "", name: "" });
+      navigate('/home');
+    }
+  } catch (error) {
+    console.log("Error during signup:", error);
+  }
+};
+
 
     return (
         <form onSubmit={handleSubmit}>
