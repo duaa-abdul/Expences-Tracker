@@ -8,12 +8,12 @@ const Navbar = ({ isOpen, onClose }) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      {/* Close button on mobile */}
+    
       <div className="md:hidden flex justify-end">
         <button onClick={onClose} className="text-[#2d2d2d] text-2xl font-bold">&times;</button>
       </div>
 
-      <h2 className="text-3xl font-bold text-center text-[#2d2d2d] m-4">TRACKER</h2>
+      <h2 className="text-3xl font-bold text-center text-[#2d2d2d] m-4">BudgetBox </h2>
 
       <nav className="flex flex-col gap-4 mt-10">
         <NavLink

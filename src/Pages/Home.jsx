@@ -19,7 +19,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen">
     
       <div className="md:hidden p-4 flex justify-between items-center bg-gradient-to-r from-[#ffecd2] to-[#fcb69f]">
-        <h2 className="text-2xl font-bold text-[#2d2d2d]">TRACKER</h2>
+        <h2 className="text-2xl font-bold text-[#2d2d2d]">BudgetBox</h2>
         <button onClick={() => setIsSidebarOpen(true)}>
           <Menu className="text-[#2d2d2d]" size={28} />
         </button>
